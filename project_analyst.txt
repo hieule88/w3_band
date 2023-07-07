@@ -1,0 +1,19 @@
+Thực hành số 1:
+
+1. Phân tích
+    1. Header
+    2. Slider
+    3. Content
+        1. About
+        2. Tour
+        3. Contact
+        4. Image
+    4. Footer
+2. Dựng base (xây móng)
+3. Xây dựng từng phần theo phân tích
+4. Hoàn thiện
+
+Note:
+1. Folder asset để các file tĩnh: ảnh, js, video, css
+2. ./ nghĩa là ngang cấp : ./assets folder assets ngang cấp với index.html
+ 
