@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Band</title>
+    <link rel="icon" href="https://w7.pngwing.com/pngs/274/853/png-transparent-musical-note-icon-music-notes-miscellaneous-logo-monochrome-thumbnail.png" type="image/x-icon"/>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
     <div id="main">
+        <!-- Header -->
         <div id="header">
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <a href="">
                         More
                         <i class="nav-down-btn ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Item1</a></li>
-                        <li><a href="">Item2</a></li>
-                        <li><a href="">Item3</a></li>
+                        <li><a href="#">Item1</a></li>
+                        <li><a href="#">Item2</a></li>
+                        <li><a href="#">Item3</a></li>
                     </ul>
                 </li>
             </ul>
@@ -33,7 +35,7 @@
             </div>
         </div>
 
-        <!-- Newly -->
+        <!-- Slider -->
         <div id="slider">
             <div class="text-content">
                 <h2 class="text-heading">New York</h2>
@@ -41,9 +43,10 @@
             </div>
         </div>
 
+        <!-- Content -->
         <div id="content">
             <!-- About section -->
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">
                     The Band
                 </h2>
@@ -51,25 +54,25 @@
                     We love music
                 </p>
                 <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="member-list">
-                    <div class="member-item">
+                <div class="row member-list">
+                    <div class="col col-third text-center">
                         <p class="member-name">Meow</p>
                         <img src="./assets/img/band/member.jpg" alt="Meow" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <p class="member-name">Meow</p>
                         <img src="./assets/img/band/member.jpg" alt="Meow" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <p class="member-name">Meow</p>
                         <img src="./assets/img/band/member.jpg" alt="Meow" class="member-img">
                     </div>
-                    <div class="clear"></div>
                 </div>
             </div>
+            <!-- End About section -->
             
-            <!-- Tour section -->
-            <div class="tour-section">
+            <!-- Begin Tour section -->
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">
                         Tour Dates
@@ -82,59 +85,103 @@
                         <li>October <span class="sold-out">Sold out</span></li>
                         <li>November <span class="quantity">3</span></li>
                     </ul>
-                    <div class="place-list">
-                        <div class="place-item">
+                    <div class="row place-list">
+                        <div class="col col-third">
                             <img src="./assets/img/place/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="place-buy-btn">Buy Tickets</a>
+                                <button class="btn js-but-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/place/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="place-buy-btn">Buy Tickets</a>
+                                <button class="btn js-but-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/place/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="place-buy-btn">Buy Tickets</a>
+                                <button class="btn js-but-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
             </div>
+            <!-- End Tour section -->
 
-            <!-- Contact section -->
-            <div class="content-section">
+            <!-- Begin contact section -->
+            <div id="contact" class="content-section">
                 <h2 class="section-heading">
                     Contact
                 </h2>
                 <p class="section-subheading">
                     Fan? Drop a note!
                 </p>
+                <div class="row contact-content">
+                    <div class="col col-half contact-infor">
+                        <p><i class="ti-location-pin"></i>Chicago, US</p>
+                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                    </div>
+
+                    <div class="col col-half contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input type="text" name="" required placeholder="Name" id="" class="form-control">
+                                </div>
+                                <div class="col col-half">
+                                    <input type="email" name="" required placeholder="Email" id="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input type="text" name="" required placeholder="Message" id="" class="form-control">
+                                </div>
+                            </div>
+
+                            <input class="btn pull-right mt-16" type="submit" value="SEND">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End contact section -->
+        
+            <div class="map-section">
+                <img src="./assets/img/map.jpg" alt="Map">
             </div>
         </div>
 
+        <!-- Footer -->
         <div id="footer">
-
+            <div class="socials-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">
+                Powered by 
+                <a href="">w3.css</a>
+            </p>
         </div>
     </div>
 
-    <div class="modal">
-        <div class="modal-container">
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
             <div class="modal-close">
-                <i class="ti-close"></i>
+                <i class="ti-close js-close-modal-btn"></i>
             </div>
             
             <header class="modal-header">
@@ -165,5 +212,32 @@
             </footer>
         </div>
     </div>
+    <script>
+        const buyBtns = document.querySelectorAll('.js-but-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-close-modal-btn')
+        const modalContainer = document.querySelector('.js-modal-container')
+        
+        function closeBuyTicket() {
+            modal.classList.remove('open')
+        } 
+        function showBuyTicket() {
+            modal.classList.add('open');
+        }
+        
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTicket)
+        }
+        
+        modalClose.addEventListener('click', closeBuyTicket)
+
+        modal.addEventListener('click', closeBuyTicket)
+        
+        modalContainer.addEventListener('click', function (event) {
+            // Ngừng việc nổi bọt: 1 sự kiện tác động tự động từ thẻ con đến thẻ cha
+            event.stopPropagation() 
+        })
+
+    </script>
 </body>
 </html>

@@ -7,6 +7,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: Lato, sans-serif;
 }
 
@@ -23,18 +24,64 @@ html {
 4. Kiểu dáng chữ
 */
 
+/* Common */
 #clear {
     /* xử lý vấn đề float làm co element cha */
     clear: both;
+}
+
+.text-center {
+    text-align: center !important;
 }
 
 .text-white {
     color: #fff !important;
 }
 
-#main {
-
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+    /* overflow: hidden; */
 }
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.pull-right {
+    float: right;
+}
+.btn {
+
+} 
 
 #header {
     height: 46.5px;
@@ -156,9 +203,10 @@ html {
 
 #content .content-section {
     width: 800px;
+    padding: 64px 0 112px; 
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0;
+    /* margin-bottom: 48px; */
 }
 
 #content .section-heading {
@@ -189,12 +237,6 @@ html {
     /* xử lý vấn đề float làm co element cha */
     overflow: hidden;
 
-}
-
-#content .member-item {
-    float: left;
-    width: 33.33333%;
-    text-align: center;
 }
 
 #content .member-img {
@@ -247,15 +289,12 @@ html {
 
 .place-list {
     overflow: hidden;
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
+    margin-top: 32px;
 }
-
+/* 
 .place-item {
-    float: left;
     width: 33.3333%;
-    padding: 0 8px;
-}
+} */
 
 .place-img {
     width: 100%;
@@ -287,20 +326,23 @@ html {
     line-height: 1.4;
 }
 
-.place-buy-btn {
+.btn {
     color: #fff;
     background-color: #000;
     text-decoration: none;
     padding: 11px 16px;
     display: inline-block;
     margin-top: 15px;
+    border: none;
 }
 
-.place-buy-btn:hover {
+.btn:hover {
     background-color: #ccc;    
+    cursor: pointer;
 }
 
 .modal {
+    display: none;
     position: fixed;
     right: 0;
     left: 0;
@@ -309,20 +351,19 @@ html {
     background: rgba(0, 0, 0, 0.4);
     align-items: center;
     justify-content: center;
-    /* display: flex; */
-    display: none;
 }
 
-.model.open {
-    display: flex;
+.modal.open {
+    display: flex !important;
 }
 
-.modal .modal-container {
+.modal-container {
     background-color: #fff;
     width: 900px;
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    animation: modalFaceIn ease .4s;
 }
 
 .modal-close {
@@ -389,4 +430,76 @@ html {
 .modal-footer {
     padding: 16px;
     text-align: right;
+}
+
+
+/* Contact form */
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-infor {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-infor i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+/* Footer section  */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .socials-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover, 
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.4);;
+}
+
+#footer .copyright {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* Tạo hoạt họa chạy hình ảnh */
+@keyframes modalFaceIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }   
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } 
 }
