@@ -79,9 +79,6 @@ html {
 .pull-right {
     float: right;
 }
-.btn {
-
-} 
 
 #header {
     height: 46.5px;
@@ -148,10 +145,23 @@ html {
     color: #000!important;
 }
 
+#header .mobile-menu-btn {
+    position: absolute;
+    float: right;
+    display: none;
+    top:0;
+    right: 0;
+}
+
 #header .search-btn {
     /* làm mất tính kế thừa chiều ngang */
     float: right;
+}
 
+#header .mobile-menu-btn:hover .menu-font{
+    background-color: #ccc!important;
+    color: #000;
+    padding: 16px 21px;
 }
 
 #header .search-btn:hover {
@@ -160,6 +170,7 @@ html {
     cursor: pointer;
 }
 
+#header .menu-font,
 #header .search-font {
     color: #fff;
     font-size: 20px;
@@ -203,7 +214,8 @@ html {
 
 #content .content-section {
     width: 800px;
-    padding: 64px 0 112px; 
+    max-width: 100%;
+    padding: 64px 16px 112px; 
     margin-left: auto;
     margin-right: auto;
     /* margin-bottom: 48px; */
@@ -233,7 +245,7 @@ html {
 }
 
 #content .member-list {
-    margin-top: 48px;
+    margin-top: 32px;
     /* xử lý vấn đề float làm co element cha */
     overflow: hidden;
 
@@ -289,7 +301,7 @@ html {
 
 .place-list {
     overflow: hidden;
-    margin-top: 32px;
+    margin-top: 16px;
 }
 /* 
 .place-item {
@@ -441,6 +453,15 @@ html {
 .contact-infor {
     font-size: 18px;
     line-height: 1.5;
+}
+
+.contact-infor a {
+    color: #2100e4;
+    opacity: 0.8;
+}
+
+.contact-infor a:hover {
+    opacity: 1;
 }
 
 .contact-infor i[class*="ti-"] {
